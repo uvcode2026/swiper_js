@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>Swiper Slider</title>
+    <!-- لود کردن فایل‌های سی‌اس‌اس Swiper -->
+    <link rel="stylesheet" href="./swiper-bundle.min.css"/>
+
+</head>
+<body>
+
+    <!-- ساختار صحیح Swiper -->
+    <div class="mySwiper" style="width:400px; background:rgb(244, 244, 245); overflow-x:hidden; margin:0 auto;">
+        <div class="swiper-wrapper" style="display:flex; gap:0 0.25rem ;">
+            <div class="swiper-slide"><img src="./images/16.jpg" width="100px" height="100px"></div>
+            <div class="swiper-slide"><img src="./images/17.jpg" width="100px" height="100px"></div>
+            <div class="swiper-slide"><img src="./images/23.webp" width="100px" height="100px"></div>
+            <div class="swiper-slide"><img src="./images/29.jpg" width="100px" height="100px"></div>
+            <div class="swiper-slide"><img src="./images/9.jpg" width="100px" height="100px"></div>
+        </div>
+    </div>
+
+    <!-- لود کردن فایل جاوااسکریپت Swiper -->
+    <script src="./swiper-bundle.min.js"></script>
+
+    <script>
+        const swiper = new Swiper(".mySwiper", {
+            slidesPerView: 3, // نمایش ۳ تصویر همزمان
+            loop: true,       // حرکت بی‌نهایت
+            autoplay: {
+                delay: 500,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true, // متوقف شدن هنگام هاور
+            },
+        });
+    </script>
+</body>
+</html>
